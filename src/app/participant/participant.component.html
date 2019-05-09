@@ -1,0 +1,6 @@
+<ng-container *ngIf="participant.github">
+  <a [href]="url" target="_blank">{{ participant.name }}</a>
+</ng-container>
+<ng-container *ngIf="!participant.github">
+  {{ participant.name }}
+</ng-container>

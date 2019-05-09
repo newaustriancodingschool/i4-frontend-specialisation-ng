@@ -1,26 +1,21 @@
 <div class="container">
   <div class="row">
     <div class="col-12 text-center">
-      <h1>Welcome</h1>
-
-      <p>
-        This is the official Angular web application of the frontend specialisation group: Intake 4 - 2018/19.
-      </p>
-
-      <p>
-        From here on, you can navigate to the individual applications of each participant.
-      </p>
+      <h1>News Austrian Coding School</h1>
+      <h2>Frontend Specialisation</h2>
+      <h2>Intake 4 - 2018/19</h2>
     </div>
+  </div>
+
+  <div class="row">
     <div class="col-12">
       <ul>
-        <li *ngFor="let participant of participants">
-          <a
-            target="_blank"
-            [href]="'https://stackblitz.com/github/' + participant.github + '/' + participant.project"
-            >{{ participant.name }}</a
-          >
-        </li>
+        <li><a routerLink="/projects">Projects</a></li>
+        <li><a routerLink="/chess">Chessboard</a></li>
+        <li><a routerLink="/task-manager">Task Manager</a></li>
       </ul>
     </div>
   </div>
+
+  <router-outlet></router-outlet>
 </div>

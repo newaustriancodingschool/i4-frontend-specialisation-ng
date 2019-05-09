@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-12 text-center">
+    <p>
+      This is the official Angular web application of the frontend specialisation group: Intake 4 - 2018/19.
+    </p>
+
+    <p>
+      From here on, you can navigate to the individual applications of each participant.
+    </p>
+  </div>
+  <div class="col-12">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="col-12">
+    <ul>
+      <li *ngFor="let participant of participants">
+        <app-participant [participant]="participant"></app-participant>
+      </li>
+    </ul>
+  </div>
+</div>
