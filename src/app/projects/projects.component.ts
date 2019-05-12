@@ -31,7 +31,7 @@ export class ProjectsComponent implements OnInit {
       project: 'myFirstAngularApp'
     },
     { name: 'Khamam, Hala', github: 'Halakh', project: 'Angular' },
-    { name: 'Abou Rshaid, Tammam', github: 'tammamabourshaid', project: 'i4-angularjs' }
+    { name: 'Abou Rshaid, Tammam', github: 'tammamabourshaid', project: 'i4-angular' }
   ].sort((p1, p2) => (p1.name > p2.name ? 1 : -1));
 
   constructor() {}
