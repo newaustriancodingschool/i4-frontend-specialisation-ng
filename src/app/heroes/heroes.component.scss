@@ -1,0 +1,12 @@
+ul {
+  padding: 0;
+  li {
+    cursor: pointer;
+    background: #eee;
+    &:hover {
+      color: #607d8b;
+      background-color: #ddd;
+    }
+    list-style: none;
+  }
+}
