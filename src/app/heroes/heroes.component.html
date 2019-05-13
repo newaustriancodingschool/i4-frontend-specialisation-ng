@@ -1,7 +1,9 @@
-<h2>My Heroes</h2>
-<ul>
-  <li *ngFor="let hero of heroes" (click)="selectHero(hero)">
-    <span class="badge badge-primary">{{ hero.id }}</span> {{ hero.name }}
-  </li>
-</ul>
-<app-hero *ngIf="selectedHero" [selectedHero]="selectedHero"></app-hero>
+<ng-container *ngIf="heroes$ | async as heroes">
+  <h2>My Heroes</h2>
+  <ul>
+    <li *ngFor="let hero of heroes" (click)="selectHero(hero)">
+      <span class="badge badge-primary">{{ hero.id }}</span> {{ hero.name }}
+    </li>
+  </ul>
+  <app-hero *ngIf="selectedHero" [selectedHero]="selectedHero"></app-hero>
+</ng-container>

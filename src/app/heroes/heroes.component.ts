@@ -9,21 +9,14 @@ import { Observable, Subscription } from 'rxjs';
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.scss']
 })
-export class HeroesComponent implements OnInit, OnDestroy {
-  heroes: Array<Hero>;
+export class HeroesComponent implements OnInit {
+  heroes$: Observable<Array<Hero>>;
   selectedHero: Hero;
-  hero: Hero = { id: 1, name: 'Windstorm' };
-  heroes$: Subscription;
 
   constructor(private heroService: HeroesService) {}
 
   ngOnInit() {
-    this.heroes$ = this.heroService.getHeroes().subscribe(heroes => (this.heroes = heroes));
-  }
-
-  ngOnDestroy() {
-    console.log('unsubscribing');
-    this.heroes$.unsubscribe();
+    this.heroes$ = this.heroService.getHeroes();
   }
 
   selectHero(hero: Hero) {
