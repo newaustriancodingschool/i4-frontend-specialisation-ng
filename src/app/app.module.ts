@@ -1,15 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ParticipantComponent } from './participant/participant.component';
 import { ChessComponent } from './chess/chess.component';
-import { TaskComponent } from './task/task.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { HeroesComponent } from './heroes/heroes.component';
 import { HeroComponent } from './hero/hero.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HeroesComponent } from './heroes/heroes.component';
+import { ParticipantComponent } from './participant/participant.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { TaskFormComponent } from './task-form/task-form.component';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
     TaskComponent,
     ProjectsComponent,
     HeroesComponent,
-    HeroComponent
+    HeroComponent,
+    TaskFormComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })

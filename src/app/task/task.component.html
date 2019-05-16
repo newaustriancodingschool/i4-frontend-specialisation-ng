@@ -1,3 +1,12 @@
-<p>
-  task works!
-</p>
+<div class="row">
+  <div class="col-6">
+    <ul>
+      <li *ngFor="let task of tasks">
+        {{ task.name }}<span class="description">{{ task.description }}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="col-6">
+    <app-task-form (addTask)="addTaskToList($event)"></app-task-form>
+  </div>
+</div>
