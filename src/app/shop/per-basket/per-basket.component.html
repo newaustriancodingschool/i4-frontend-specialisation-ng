@@ -1,0 +1,30 @@
+<h2>Purchases per Basket / Branch</h2>
+<ng-container *ngFor="let branch of branches">
+  <h3>{{ branch.name }}</h3>
+  <ng-container *ngFor="let basket of branch.baskets">
+    <h4>{{ basket.name }}</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Code</th>
+          <th>Amount</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let basketItem of basket.basketItems">
+          <td>{{ basketItem.product }}</td>
+          <td>{{ basketItem.code }}</td>
+          <td>{{ basketItem.amount }}</td>
+          <td>{{ basketItem.price }}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td colspan="3">Total Basket</td>
+        <td>{{ calculateBasketTotal(basket) }}</td>
+      </tfoot>
+    </table>
+  </ng-container>
+  <h4>Branch Total: {{ calculateBranchTotal(branch) | currency: '€ ':'symbol':'1.2-2' }}</h4>
+</ng-container>

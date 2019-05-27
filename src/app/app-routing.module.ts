@@ -4,6 +4,9 @@ import { ChessComponent } from './chess/chess.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { TaskComponent } from './task/task.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { PerBasketComponent } from './shop/per-basket/per-basket.component';
+import { PerProductComponent } from './shop/per-product/per-product.component';
+import { ShopComponent } from './shop/shop/shop.component';
 
 const routes: Routes = [
   {
@@ -26,6 +29,10 @@ const routes: Routes = [
   {
     path: 'heroes',
     component: HeroesComponent
+  },
+  {
+    path: 'shop',
+    loadChildren: './shop/shop.module#ShopModule'
   }
 ];
 

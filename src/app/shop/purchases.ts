@@ -1,21 +1,4 @@
-export interface Purchases {
-  [branch: string]: Branch;
-}
-
-export interface Branch {
-  [basketName: string]: Basket;
-}
-
-export interface Basket {
-  [productName: string]: BasketItem;
-}
-
-export interface BasketItem {
-  product: string;
-  amount: number;
-  price: number;
-  code: number;
-}
+import { Purchases } from './types';
 
 export const purchases: Purchases = {
   Hofer: {
