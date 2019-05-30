@@ -1,0 +1,4 @@
+<ng-container *ngIf="products$ | async as products">
+  <app-products [products]="products"></app-products>
+</ng-container>
+<a routerLink="/shop/add-product" class="btn btn-primary">Add Product</a>

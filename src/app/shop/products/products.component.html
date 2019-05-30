@@ -1,0 +1,17 @@
+<table class="table">
+  <thead>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>&nbsp;</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.code }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td><a class="btn btn-primary" [routerLink]="['/', 'shop', 'edit-product', product.id]">Edit</a></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
