@@ -11,6 +11,7 @@ import { ParticipantComponent } from './participant/participant.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { TaskFormComponent } from './task-form/task-form.component';
 import { TaskComponent } from './task/task.component';
+import { SudokuComponent } from './sudoku/sudoku.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TaskComponent } from './task/task.component';
     ProjectsComponent,
     HeroesComponent,
     HeroComponent,
-    TaskFormComponent
+    TaskFormComponent,
+    SudokuComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],

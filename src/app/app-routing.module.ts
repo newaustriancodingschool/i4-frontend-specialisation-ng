@@ -7,6 +7,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { PerBasketComponent } from './shop/per-basket/per-basket.component';
 import { PerProductComponent } from './shop/per-product/per-product.component';
 import { ShopComponent } from './shop/shop/shop.component';
+import { SudokuComponent } from './sudoku/sudoku.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: 'shop',
     loadChildren: './shop/shop.module#ShopModule'
+  },
+  {
+    path: 'sudoku',
+    component: SudokuComponent
   }
 ];
 

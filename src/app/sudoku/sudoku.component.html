@@ -1,0 +1,21 @@
+<h3>Welcome to the Sudoku Solver</h3>
+<p>Fill in the values of a sudoku board and click solve to calculate the solution.</p>
+
+<form [formGroup]="formGroup" (ngSubmit)="solve()">
+  <ng-container formArrayName="fields">
+    <div class="row" *ngFor="let subRow of fieldIterator">
+      <div class="col-12">
+        <ng-container *ngFor="let ix of subRow">
+          <input type="number" maxLength="1" min="1" max="9" [formControlName]="ix" />
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+
+  <div class="row">
+    <div class="col-12">
+      <input type="button" class="btn btn-secondary" (click)="reset()" value="Reset Fields" />
+      <input type="submit" class="btn btn-primary text-center" value="Solve It!" />
+    </div>
+  </div>
+</form>
